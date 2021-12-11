@@ -34,9 +34,6 @@ function updateEntry(sheet,ticketNumber,columnToUpdate,valueToUpdate){
             return;
         }
     }
-
-
-
 }
 
 
