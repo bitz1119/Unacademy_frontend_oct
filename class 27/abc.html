@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<p>
+    <form method="get" action="https://geek-jokes.sameerkumar.website/api" name="form1" onsubmit="return verify()">
+        Format : <input name="format">
+        <br>
+        <input type="submit" value="Submit">
+
+    </form>
+<script>
+    function verify(){
+        let formData = document.forms["form1"]["firstName"].value;
+        if(formData == ""){
+            return false;
+        }
+        console.log(formData);
+        return true;
+    }
+</script>
+</body>
+</html>
