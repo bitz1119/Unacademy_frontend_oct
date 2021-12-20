@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id = "num1" type="number" placeholder="Number 1" >
+    <input id = "num2" type="number" placeholder="Number 2" >
+
+    <button onclick="multiply()">Multiply</button>
+    <h3 id="ans"> </h3>
+</body>
+<script>
+    function multiply(){
+        let num1 = parseInt(document.getElementById("num1").value);
+        let num2 = parseInt(document.getElementById("num2").value);
+        
+        let ans = document.getElementById("ans");
+        ans.innerHTML = "<span> 1000 </span>";
+
+    }
+</script>
+
+
+
+</html>
