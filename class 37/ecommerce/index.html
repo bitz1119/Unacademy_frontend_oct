@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+
+    <style>
+
+        #content-box > div{
+            margin: 20px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="container-fluid">
+    <nav class="navbar navbar-light bg-light">
+        <span class="navbar-brand mb-0 h1">Ecommerce</span>
+    </nav>
+    <h2 class="text-center">All Products</h2>
+        <div class="row">
+            <div class="col-3">
+                <input id ="input" type="text" placeholder="enter to filter" onchange="filter()" >
+            </div>
+
+
+            <div class="col-9 row" id="content-box">
+
+                <div class="card" style="width: 14rem;">
+                    <img src="./img.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4>Laptop M001</h4>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div>
+
+                  <div class="card" style="width: 14rem;">
+                    <img src="./img.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4>Laptop M0021</h4>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div>
+
+                  <div class="card" style="width: 14rem;">
+                    <img src="./img.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4>Laptop M0022</h4>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div>
+
+                  <div class="card" style="width: 14rem;">
+                    <img src="./img.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4>Laptop M0013</h4>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div>
+
+                  <div class="card" style="width: 14rem;">
+                    <img src="./img.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4>Laptop M0014</h4>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
