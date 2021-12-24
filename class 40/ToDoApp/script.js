@@ -41,7 +41,7 @@ function getSelectedOption(filterNodes){
             ans = filterNodes[i].value;
         }
     }
-    console.log(ans);
+    console.log("inside getSelectedOption"  + ans);
     return ans;
 }
 
@@ -83,7 +83,7 @@ function constructTable(){
     let innerHTMLTbody = "";
     for(let i = 0;i<todoArr.length;i++){
         let row = `
-        <tr class="${(todoArr[i][3])?"table-danger":"table-primary"}" display = "${shouldDisplay(todoArr[i][3],selectedFilterOption)}">
+        <tr class="${(todoArr[i][3])?"table-danger":"table-primary"}" style= "display:${shouldDisplay(todoArr[i][3],selectedFilterOption)}">
         <th scope="row">${i+1}</th>
         <td>${todoArr[i][0]}</td>
         <td>${todoArr[i][1]}</td>
