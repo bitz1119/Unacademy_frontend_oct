@@ -1,0 +1,18 @@
+h1 {
+    text-align: center;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    height: 50vh;
+    width: 50%;
+}
+
+.tiles {
+    background-color: lightgreen;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+}
