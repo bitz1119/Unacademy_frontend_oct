@@ -5,8 +5,7 @@ h1 {
 #board {
     display: grid;
     grid-template-columns: repeat(3,auto);
-    height: 50vh;
-    width: 50%;
+    width: 300px;
 }
 
 .tiles {
@@ -14,5 +13,11 @@ h1 {
     border: 2px solid white;
     border-radius: 10px;
     color: white;
-    text-align: center;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
 }
+
