@@ -8,9 +8,13 @@ let tiles = document.getElementsByClassName("tiles");
 let headStatus = document.getElementById("gameStatus");
 
 for(let i = 0;i<tiles.length;i++){
+    console.log("adding eventListener " + i);
     tiles[i].addEventListener("click",()=>{
+        console.log("executing event listener")
         takeInput(i);
     })
+
+    console.log("EventListener completed " + i)
 }
 
 function validClick(num){
