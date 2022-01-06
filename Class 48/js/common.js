@@ -1,3 +1,3 @@
 if(localStorage.getItem("user") == undefined){
-    window.location.href = "login.html";
+    window.location.href = "google.html";
 }

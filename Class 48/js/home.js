@@ -20,10 +20,21 @@ async function fetchCategories(){
 }
 
 function renderCategory(categoryArray){
+
+    let allProductCard =  ` <div class="card-1 mx-5  my-5" onclick="redirectProductList()">
+        <div class="card text-white bg-primary mb-3" style="width: 12rem;">
+        <div class="card-header"></div>
+        <div class="card-body">
+          <h5 class="card-title">All products</h5>
+        </div>
+      </div>
+    </div>`
+    categoryDiv.innerHTML += allProductCard;
+
     for(i = 0;i<categoryArray.length;i++){
         let card = `            
     <div class="card-1 mx-5  my-5">
-        <div class="card text-white bg-primary mb-3" style="width: 12rem;">
+        <div class="card text-white bg-primary mb-3" style="width: 12rem;" onclick="redirectProductList(${categoryArray[i].categoryId})" >
             <div class="card-header"></div>
             <div class="card-body">
               <h5 class="card-title">${categoryArray[i].name}</h5>
@@ -32,6 +43,15 @@ function renderCategory(categoryArray){
     </div>`
         categoryDiv.innerHTML += card;
 
+    }
+}
+
+function redirectProductList(categoryId){
+    if(categoryId==undefined){
+        window.location.href = "productlist.html";
+    }
+    else{
+        window.location.href = "productlist.html?categoryId=" + categoryId;
     }
 }
 
