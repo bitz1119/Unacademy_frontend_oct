@@ -1,0 +1,225 @@
+Base URL - http://13.235.87.215:4000
+
+1. '/user/login'
+
+request json
+{
+    username: username,
+    password: password
+}
+
+response json on success
+{
+    msg: 'Successfully Logged In',
+    username: username,
+    password: password
+}
+
+response json on failure
+{
+    msg: 'Invalid Email or Password'
+}
+
+
+
+2. 'user/signup'
+
+request json
+{
+    username: username,
+    password: password
+}
+
+response json on success
+{
+    msg: 'Successfully Signup Up',
+    username: username,
+    password: password
+}
+
+response json on failure
+{
+    msg: 'User already exists'
+}
+
+
+
+3. '/category/all'
+request json
+{
+    username: username,
+    password: password
+}
+
+response json on success
+{
+    msg: 'Successfully fetched categories',
+    categories: [
+        {
+            categoryId: categoryId,
+            name: name
+        }
+    ]
+}
+
+response json on failure
+{
+    msg: 'Error in fetching categories'
+}
+
+
+
+
+4. '/product/all'
+request json
+{
+    categoryId: categoryId,  // if category filter is used
+    minPrice: minPrice,    // if price filter is used
+    maxPrice: maxPrice,    // if price filter is used
+    query: query    // if search filter is used
+}
+
+response json on success
+{
+    msg: 'Successfully fetched products',
+    products: [
+        {
+            productId: productId,
+            name: name,
+            price: price
+        }
+    ]
+}
+
+response json on failure
+{
+    msg: 'Error in fetching products'
+}
+
+
+
+
+5. '/product/details'
+request json
+{
+    productId: productId,
+    userId: userId
+}
+
+response json on success
+{
+    msg: 'Successfully fetched product details',
+    productDetails: {
+        name: name,
+        price: price,
+        description: description,
+        addedTocart: 0 or 1    // 0 means not added to cart and 1 means viceversa
+    }
+}
+
+response json on failure
+{
+    msg: 'Error in fetching product details'
+}
+
+
+
+
+6. '/order/add'
+request json
+{
+    productId: productId,
+    userId: userId
+}
+
+response json on success
+{
+    msg: 'Successfully created order',
+    orderDetails: {
+        orderId: orderId
+    }
+}
+
+response json on failure
+{
+    msg: 'Error in creating order'
+}
+
+
+
+
+7. '/order/details'
+request json
+{
+    userId: userId,
+}
+
+response json on success
+{
+    msg: 'Successfully fetched order details',
+    orderDetails: {
+        orderId: orderId,
+        total: total,
+        products: [
+            {
+                price: price,
+                name: name,
+                quantity: quantity,
+                productId: productId
+            }
+        ]
+    }
+}
+
+response json on failure
+{
+    msg: 'Error in fetching order details'
+}
+
+
+
+
+8. '/order/edit'
+request json
+{
+    orderId: orderId,
+    userId: userId,
+    payment: true   //when confirming payment,
+    remove: true    //when removing product from order cart,
+    quantity: quantity  //when updating quantity in cart
+}
+
+response json on success payment
+{
+    msg: 'Successfully updated order payment'
+}
+
+response json on failure payment
+{
+    msg: 'Error in confirming payment'
+}
+
+response json on successfully product removed from cart
+{
+    msg: 'Successfully updated order details'
+}
+
+response json on failure in product removal from cart
+{
+    msg: 'Error in updating order details'
+}
+
+response json on successfully update product quantinty in cart
+{
+    msg: 'Successfully updated order details'
+}
+
+response json on failure in update product quantiy in cart
+{
+    msg: 'Error in updating order details'
+}
+
+
+
+
+

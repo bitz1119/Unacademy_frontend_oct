@@ -42,7 +42,7 @@ function renderProductListPage(arr){
     for(let i = 0;i<arr.length ;i++){
         let card = `
         <div class="card mx-3 my-3" style="width: 12rem;">
-            <img src="./resources/imagens-ecommerce.png" class="card-img-top" alt="...">
+            <img src="./resources/img/imagens-ecommerce.png" class="card-img-top" alt="...">
             <div class="card-body">
             <h5 class="card-title">${arr[i].name}</h5>
             <h5 class="card-title">Price : ${arr[i].price} </h5>
