@@ -46,5 +46,5 @@ function login(username,password){
     })
 }
 
-signUp("111","111")
+// signUp("111","111")
 // login("11","11");
