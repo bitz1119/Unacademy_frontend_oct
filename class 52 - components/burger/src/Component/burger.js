@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { UpperBread, LowerBread , Lettuce} from './breadParts';
+import { UpperBread, LowerBread , Lettuce,Tomatoes, Cheese} from './breadParts';
 
 
 class Burger extends Component {
@@ -12,13 +12,10 @@ class Burger extends Component {
         <div>
             <UpperBread/>
             <Lettuce/>
-            {/* 
             <Tomatoes/>
             <Cheese/>
             <Lettuce/>
             <Tomatoes/> 
-            <Tomatoes/> 
-            */}
             <LowerBread/> 
         </div> );
     }

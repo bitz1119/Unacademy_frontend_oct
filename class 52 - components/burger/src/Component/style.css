@@ -18,3 +18,18 @@
     background-color: greenyellow;
     border-radius: 5% 5% 5% 5%;
 }
+
+.tomatoes{
+    width: 25%;
+    height: 50px;
+    background-color: red;
+    border-radius: 10% 10% 10% 10%;
+    display: inline-block;
+}
+
+.cheese{
+    width: 50%;
+    height: 50px;
+    background-color: rgb(245, 245, 41);
+    border-radius: 5% 5% 5% 5%;
+}

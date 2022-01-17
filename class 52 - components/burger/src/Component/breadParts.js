@@ -27,3 +27,21 @@ export class Lettuce extends Component {
         );
     }
 }
+
+
+export function Tomatoes(){
+    return (<>
+            <div className='tomatoes'></div>
+            <div className='tomatoes'></div>
+            <br></br>
+        </>
+    )
+}
+
+export function Cheese(){
+    return (<>
+            <div className='cheese'></div>
+        </>
+    )
+}
+

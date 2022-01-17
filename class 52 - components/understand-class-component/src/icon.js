@@ -7,11 +7,9 @@ class Icon extends Component {
     }
 
     render(){
-
-        return (
-            <h1>{this.props.isMale=="true"?
-            "Male Icon" : "Female Icon"}</h1>
-        )
+        let localIsMale = (isMale=="true");
+        console.log(localIsMale)
+        return localIsMale && (<h1>{ "some mesage"}</h1>)
 
     }
 
