@@ -1,0 +1,20 @@
+.upper-bread {
+    width: 50%;
+    height: 200px;
+    background-color: orange;
+    border-radius: 50% 50% 5% 5%;
+}
+
+.lower-bread {
+    width: 50%;
+    height: 100px;
+    background-color: orange;
+    border-radius: 5% 5% 5% 5%;
+}
+
+.lettuce{
+    width: 50%;
+    height: 50px;
+    background-color: greenyellow;
+    border-radius: 5% 5% 5% 5%;
+}
