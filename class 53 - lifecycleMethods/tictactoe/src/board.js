@@ -45,7 +45,6 @@ class Board extends Component {
     }
 
     handleClick(i){
-
         if(this.isClickValid(i)==false){
             return;
         }
@@ -62,6 +61,13 @@ class Board extends Component {
         return <Square value={this.state.squares[i]} whenButtonClicked={()=>{
             this.handleClick(i);
         }} />
+    }
+
+    reset() {
+        this.setState ({ 
+            squares : Array(9).fill(null),
+            isXTurn : true,
+        });
     }
 
     render() { 
@@ -89,6 +95,9 @@ class Board extends Component {
                 </div>
 
             </div>
+
+            <button onClick={()=>this.reset()}> Reset</button>
+
             </>
 
          );
