@@ -1,0 +1,14 @@
+.board {
+    height: 300px;
+    width : 300px;
+}
+
+.board-row {
+    height: 100px;
+}
+
+.square {
+    height: 100px;
+    width: 100px;
+
+}

@@ -17,7 +17,7 @@ class App extends Component {
             }}>Click me </button>
             <LifeCycle count = {this.state.count}/>
         </> 
-         );
+        );
     }
 }
  

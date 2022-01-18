@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './app';
-import LifeCycle from './lifecycle';
+import Board from './board';
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App/>
+    <Board/>
 
   </React.StrictMode>,
   document.getElementById('root')

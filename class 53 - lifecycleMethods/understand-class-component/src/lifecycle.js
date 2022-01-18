@@ -13,8 +13,10 @@ class LifeCycle extends Component {
     }
 
     componentDidMount(){
-        console.log("* it is componentDidMount")
+        console.log("* it is componentDidMount");
     }
+
+
 }
  
 export default LifeCycle;
