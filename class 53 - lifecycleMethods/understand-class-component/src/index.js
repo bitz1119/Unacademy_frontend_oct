@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Icon from './icon';
+import App from './app';
+import LifeCycle from './lifecycle';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Icon isMale="true"></Icon>
-    <Icon isMale="false"></Icon>
+    <App/>
 
   </React.StrictMode>,
   document.getElementById('root')
