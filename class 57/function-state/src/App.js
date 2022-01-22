@@ -1,16 +1,29 @@
 import './App.css';
-import React, { useState } from 'react';
+import React, { Component } from 'react';
 
-function App(props) {
-  
-  let [variable,setVariable] = useState(0);
+class App extends Component {
+  state = {  } 
 
-  return (
-    <div>
-      <button onClick={()=>{setVariable(variable+1)}}>Increment</button>
-      <h1>counter is {variable}</h1>
+  constructor(props){
+    super();
+    this.inputRef = React.createRef();
+  }
+
+
+  render() { 
+    return (
+      <div>
+      <input ref={this.inputRef}/>
+      <button onClick={()=>{
+        console.log(this.inputRef);
+        alert("current input is " + this.inputRef.current.value )
+      }}>Click me</button>
     </div>
-  );
+
+    );
+  }
 }
+ 
+
 
 export default App;
