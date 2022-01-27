@@ -15,8 +15,7 @@ function App() {
           <TextArea changeData={setData}/>
         </div>
         <div className='col-6'>
-          <h1>{data}</h1>
-          <Display />
+          <Display data={data}/>
         </div>
       </div>
     </div>
