@@ -1,19 +1,22 @@
 import StateCard from "./StateCard";
 import states from "../Resources/states";
-function States() {
+function States(props) {
 
-    const renderCards = (data)=>{
-        return <StateCard data={{
-            state:"Delhi",
-            stateId:30,
-            renderDistrict:()=>{console.log("Hello")}
-        }}/> 
+    const renderCards = ()=>{
+        return states.map((element)=>{
+            return <StateCard data={{
+                state:element["state_name"],
+                stateId:element["state_id"],
+                renderDistrict:()=>{props.setCurrStateId(element["state_id"])},
+            }}/> 
+        })
+
     }
 
 
-    return ( <>
+    return ( <div style={{padding:"5px"}}>
         {renderCards()}
-    </> );
+    </div> );
 }
 
 export default States;
