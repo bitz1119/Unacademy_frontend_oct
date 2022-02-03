@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from 'axios'
+import StateCard from "./StateCard";
 
 function Districts(props) {
     
@@ -7,7 +8,12 @@ function Districts(props) {
     let [stateId,setStateId] = useState("");
     const renderCards = ()=>{
         return districts.map((element)=>{
-            return <h1></h1> 
+            return <StateCard data={{
+                state:element["district_name"],
+                stateId:element["district_id"],
+                renderDistrict:()=>{props.setCurrDistrictId(element["district_id"])},
+                color:"bg-success"
+            }}/> 
         })
 
     }
@@ -23,10 +29,9 @@ function Districts(props) {
                 setStateId(props.currStateId);
             })
         }
+    })
 
-    },[])
-
-    return ( <div style={{padding:"5px"}}>
+    return ( <div style={{padding:"5px" , overflow: "auto", height:"100vh"}}>
         {renderCards()}
     </div> );
 

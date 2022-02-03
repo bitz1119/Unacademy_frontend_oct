@@ -14,7 +14,7 @@ function States(props) {
     }
 
 
-    return ( <div style={{padding:"5px"}}>
+    return ( <div style={{padding:"5px" , overflow: "auto", height:"100vh"}}>
         {renderCards()}
     </div> );
 }
