@@ -15,7 +15,6 @@ function App() {
         <States className="col-3" currStateId={currStateId} 
         setCurrStateId={setCurrStateId}/>
         <Districts className="col-3" currStateId={currStateId} />
-
       </div>
     </div>
   );
