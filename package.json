@@ -1,5 +1,9 @@
 {
   "dependencies": {
-    "readline-sync": "^1.4.10"
+    "@auth0/auth0-react": "^1.9.0",
+    "react-redux": "^7.2.6",
+    "react-router-dom": "^6.2.1",
+    "readline-sync": "^1.4.10",
+    "redux": "^4.1.2"
   }
 }
