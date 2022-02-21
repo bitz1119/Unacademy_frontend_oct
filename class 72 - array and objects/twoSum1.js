@@ -1,3 +1,6 @@
+// https://leetcode.com/problems/two-sum
+
+
 var findX = (nums,target,j) => {
     // O(n) time taken here
     return nums.indexOf(target,j);
