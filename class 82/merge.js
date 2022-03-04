@@ -1,20 +1,25 @@
 
-// merging 2 sorted array
-function merge(arr1,arr2){
-    // arr1 length m
-    // arr2 length n
-    let arr3 = new Array(arr1.length + arr2.length);
+// https://leetcode.com/problems/merge-sorted-array
+/**
+ * @param {number[]} nums1
+ * @param {number} m
+ * @param {number[]} nums2
+ * @param {number} n
+ * @return {void} Do not return anything, modify nums1 in-place instead.
+ */
+var merge = function(arr1, m, arr2, n) {
+    let arr3 = new Array(m + n);
     let pointer1 = 0;
     let pointer2 = 0;
 
     for(let i=0;i<arr3.length;i++){
         // arr1[pointer1] in undefined
-        if(arr1[pointer1] === undefined){
+        if(pointer1 === m){
             arr3[i] = arr2[pointer2];
             pointer2++;
         }
         // arr2[pointe2] is undefined
-        else if(arr2[pointer2] === undefined){
+        else if(pointer2 === n){
             arr3[i] = arr1[pointer1];
             pointer1++;
         }
@@ -30,22 +35,8 @@ function merge(arr1,arr2){
             }
         }
     }
-    return arr3;
-}
-
-
-
-function mergeSort(arr){
-    if(arr.length <= 1){
-        return arr;
+    for(let i=0;i<arr3.length;i++){
+        arr1[i] = arr3[i];
     }
-    let mid = arr.length/2;
-    let arr1 = mergeSort(arr.slice(0,mid));
-    let arr2 = mergeSort(arr.slice(mid));
-    return merge(arr1,arr2);
-}
 
-
-console.log(mergeSort([2,5,6,7,8,1,2,4,5,-1,-4,-7,6]))
-
-
+};

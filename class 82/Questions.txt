@@ -1,0 +1,9 @@
+1. https://leetcode.com/problems/squares-of-a-sorted-array/
+
+
+2. https://leetcode.com/problems/remove-duplicates-from-sorted-array/
+
+3. https://leetcode.com/problems/sort-array-by-parity/
+
+
+4. https://leetcode.com/problems/sort-array-by-increasing-frequency/
