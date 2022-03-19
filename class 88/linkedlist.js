@@ -62,6 +62,23 @@ class LinkedList {
         }
     }
 
+    // removeLastNode
+    // go to 2nd last element
+    removeLastNode(){
+        if(this.head == null){
+            return;
+        }
+        if(this.head.next == null){
+            this.head = null;
+        }
+
+        // go till 2nd last element
+        let temp = this.head;
+        while(temp.next.next != null){
+            temp = temp.next
+        }
+        temp.next = null;
+    }
 }
 
 
@@ -85,4 +102,11 @@ console.log("================================================")
 linkedList.addNodeOnIndex(2.5,3);
 linkedList.addNodeOnIndex(3.5,5);
 linkedList.display();
+
+console.log("================================================")
+linkedList.removeLastNode();
+linkedList.removeLastNode();
+linkedList.display();
+
+console.log(linkedList);
 
