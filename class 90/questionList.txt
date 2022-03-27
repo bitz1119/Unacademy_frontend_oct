@@ -1,0 +1,8 @@
+print array 
+print array in reverse
+print all odd indexes of array 
+find sum of all odd indexes of array
+multiply all even indexes of array
+Implement quick sort
+fibonacci function
+

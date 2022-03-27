@@ -46,11 +46,13 @@ class LinkedList{
 
 
     display(){
+        let linkedListString = "";
         let temp = this.head;
         while(temp != null){
-            console.log(temp.data)
+            linkedListString += temp.data + "-->";
             temp = temp.next;
         }
+        console.log(linkedListString);
     }
 
     addOnIndex(data,index){
@@ -119,8 +121,29 @@ class LinkedList{
             // jump to next.next
             temp = temp.next.next;
         }
+    }
+
+    reverseRecursiveInner(currNode){
+        
+        if(currNode.next == null){
+            this.head = currNode;
+            return currNode;
+        }
+
+        let lastNode = this.reverseRecursiveInner(currNode.next);
+        lastNode.next = currNode;
+        console.log(lastNode.data+"-->"+lastNode.next.data)
+        return currNode;
 
     }
+
+    reverseRecursive(){
+        let temp = this.head;
+        this.reverseRecursiveInner(temp);
+        temp.next = null;
+    }
+
+
 }
 
 let linkedList = new LinkedList();
@@ -130,8 +153,23 @@ linkedList.addNode(30);
 linkedList.addNode(40);
 
 linkedList.display();
-linkedList.reorderLinkedlist()
+linkedList.reverseRecursive()
 linkedList.display();
 
 
 
+
+
+var hasCycle = function(head) {
+    let slow = head;
+    let fast = head;
+    while(fast != null && fast.next != null){
+        fast = fast.next.next;
+        slow = slow.next;
+        if(fast === slow){
+            return true;
+        }
+    }
+    return false;
+    
+};
