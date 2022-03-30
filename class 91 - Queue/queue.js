@@ -1,12 +1,17 @@
+
 class queue{
     constructor(){
         this.que = [];
         this.size = 0;
     }
+
+    // time for enqueue O(1)
     enqueue(ele){
         this.que.push(ele);
         this.size++;
     }
+
+    // time for Dequeue O(n)
     dequeue(){
         // we have remove first element 
         // check if we have element or not
@@ -47,3 +52,8 @@ q.enqueue(30)
 q.display();
 console.log(q.dequeue());
 q.display()
+
+
+linkedList --> array
+// operation 1 : adding element at last position      O(1)  --> O(n)
+// operation 2 : removing element at start position   O(n)  --> O(1)    
