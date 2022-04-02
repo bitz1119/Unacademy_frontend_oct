@@ -9,7 +9,7 @@ for (let index = 0; index < alpha.length; index++) {
 let q = [];
 
 for (let i = 0; i < stream.length; i++) {
-    let char = stream.charAt(i);
+    let char = stream[i];
     frequency[char]++;
     if(frequency[char] == 1){
         q.push(char);
