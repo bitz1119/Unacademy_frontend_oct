@@ -45,6 +45,41 @@ class BinaryTree{
         this.preorder(parent.right);
     }
 
+    inorder(parent=this.root){
+        // base case
+        if(parent == null){
+            return;
+        }
+        this.inorder(parent.left);
+        console.log(parent.data);
+        this.inorder(parent.right);
+    }
+
+    //write the code for post orders
+    postOrder(parent=this.root){
+        // base case
+        if(parent == null){
+            return;
+        }
+        this.postOrder(parent.left);
+        this.postOrder(parent.right);
+        console.log(parent.data);
+    }
+
+    levelOder(){
+        let queue = [];
+        queue.push(this.root);
+        while(queue.length != 0){
+            let node = queue.shift();
+            console.log(node.data);
+            if(node.left != null){
+                queue.push(node.left);
+            }
+            if(node.right != null){
+                queue.push(node.right);
+            }
+        }
+    }
 }
 let bt = new BinaryTree();
 bt.addNode(10)
@@ -55,4 +90,4 @@ bt.addNode(40,"l","r")
 bt.addNode(50,"r","l")
 bt.addNode(60,"r","r")
 
-bt.preorder();
+bt.levelOder();
